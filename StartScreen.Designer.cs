@@ -29,6 +29,7 @@ namespace Flappy_Bird_Windows_Form
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
             this.startbutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.text = new System.Windows.Forms.Label();
@@ -75,6 +76,7 @@ namespace Flappy_Bird_Windows_Form
             this.Controls.Add(this.text);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.startbutton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartScreen";
             this.Text = "StartScreen";
             this.Load += new System.EventHandler(this.StartScreen_Load);

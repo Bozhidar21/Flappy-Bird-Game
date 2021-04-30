@@ -30,6 +30,7 @@ namespace Flappy_Bird_Windows_Form
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm1));
             this.pipeTop = new System.Windows.Forms.PictureBox();
             this.Bird = new System.Windows.Forms.PictureBox();
             this.pipeBottom = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,7 @@ namespace Flappy_Bird_Windows_Form
             // pipeTop
             // 
             this.pipeTop.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.pipedown;
-            this.pipeTop.Location = new System.Drawing.Point(624, 1);
+            this.pipeTop.Location = new System.Drawing.Point(668, 0);
             this.pipeTop.Name = "pipeTop";
             this.pipeTop.Size = new System.Drawing.Size(76, 132);
             this.pipeTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,6 +55,7 @@ namespace Flappy_Bird_Windows_Form
             // 
             // Bird
             // 
+            this.Bird.BackColor = System.Drawing.Color.Transparent;
             this.Bird.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.bird;
             this.Bird.Location = new System.Drawing.Point(141, 167);
             this.Bird.Name = "Bird";
@@ -66,7 +68,7 @@ namespace Flappy_Bird_Windows_Form
             // pipeBottom
             // 
             this.pipeBottom.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.pipe;
-            this.pipeBottom.Location = new System.Drawing.Point(523, 272);
+            this.pipeBottom.Location = new System.Drawing.Point(565, 263);
             this.pipeBottom.Name = "pipeBottom";
             this.pipeBottom.Size = new System.Drawing.Size(76, 131);
             this.pipeBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,10 +95,10 @@ namespace Flappy_Bird_Windows_Form
             // scoretext
             // 
             this.scoretext.AutoSize = true;
-            this.scoretext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.scoretext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.scoretext.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.scoretext.ForeColor = System.Drawing.Color.Black;
-            this.scoretext.Location = new System.Drawing.Point(12, 355);
+            this.scoretext.Location = new System.Drawing.Point(12, 409);
             this.scoretext.Name = "scoretext";
             this.scoretext.Size = new System.Drawing.Size(124, 32);
             this.scoretext.TabIndex = 4;
@@ -114,6 +116,7 @@ namespace Flappy_Bird_Windows_Form
             this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.Bird);
             this.Controls.Add(this.pipeTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameForm1";
             this.Text = "Flappy Bird";
             this.Load += new System.EventHandler(this.Form1_Load);

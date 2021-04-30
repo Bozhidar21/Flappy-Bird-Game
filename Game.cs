@@ -12,7 +12,7 @@ namespace Flappy_Bird_Windows_Form
 {
     public partial class GameForm1 : Form
     {
-        int pipeSpeed = 8;
+        int pipeSpeed = 10;
         int gravity = 15;
         int score = 0;
 
@@ -41,7 +41,7 @@ namespace Flappy_Bird_Windows_Form
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = 15;
+                gravity = 10;
             }
         }
 
@@ -49,7 +49,7 @@ namespace Flappy_Bird_Windows_Form
         {
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -15;
+                gravity = -10;
             }
         }
 
@@ -61,7 +61,7 @@ namespace Flappy_Bird_Windows_Form
         private void endGame()
         {
             gameTimer.Stop();
-            scoretext.Text += " Game Over :)";
+            scoretext.Text += " Game Over! :(";
         }
 
         private void gameTimerEvent(object sender, EventArgs e)
@@ -91,14 +91,15 @@ namespace Flappy_Bird_Windows_Form
                 endGame();
             }
 
-            if(score > 5)
-            {
-                pipeSpeed = 10;
-            }
 
             if(score > 10)
             {
                 pipeSpeed = 15;
+            }
+
+            if(score > 15)
+            {
+                pipeSpeed = 20;
             }
         }
 
